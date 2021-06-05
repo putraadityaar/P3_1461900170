@@ -14,20 +14,14 @@ class putraController extends Controller
         return view('dokter0170',['dokter' => $dokter]);
     }
 
-    public function pasien()
-    {
-        $pasien = DB::table('pasien')->get();
-        return view('pasien0170',['pasien' => $pasien]);
-    }
-
     public function kamar()
     {
-        $kamar = DB::table('kamar')->get();
+        $kamar = DB::table('kamar')
+        ->join('pasien','kamar.id_pasien','=','pasien.id')
+        ->join('dokter','kamar.id_dokter','=','dokter.id')
+        ->select('kamar.id AS idk','pasien.nama AS pnama','dokter.nama AS dnama')
+        ->orderby('idk','asc')
+        ->get();
         return view('kamar0170',['kamar' => $kamar]);
-    }
-    public function user()
-    {
-        $user = DB::table('user')->get();
-        return view('user0170',['user' => $user]);
     }
 }

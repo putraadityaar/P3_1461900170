@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PASIEN</title>
+    <title>pasien</title>
 </head>
 <body>
     <a href="{{url('/dokter')}}">
@@ -23,7 +23,7 @@
     <br>
   <h1>Halaman Pasien</h1>
 
-    <button href="">Tambah</button>
+    <a class="button" href="{{url('/tambah pasien')}}">Tambah</a> 
     </div>
     </div>
     </div>
@@ -33,12 +33,17 @@
             <th>ID</th>
             <th>NAMA</th>
             <th>ALAMAT</th>
+            <th>ACTION</th>
         </tr>
         @foreach($pasien as $p)
         <tr>
             <td>{{ $p->id }}</td>
             <td>{{ $p->nama }}</td>
             <td>{{ $p->alamat }}</td>
+            <td>
+            <a href="">Edit</a>
+            <a href="">Delete</a>
+            </td>
         </tr>
         @endforeach
     </table>

@@ -22,23 +22,19 @@
     <div class="row my-8">
     <br>
     <h1>Halaman KAMAR</h1>
-
-    <button href="">Tambah</button>
-    </div>
-    </div>
     </div>
 
     <table border="1">
         <tr>
             <th>ID</th>
-            <th>NAMA</th>
-            <th>JABATAN</th>
+            <th>Pasien</th>
+            <th>Dokter</th>
         </tr>
         @foreach($kamar as $k)
         <tr>
-            <td>{{ $k->id }}</td>
-            <td>{{ $k->nama }}</td>
-            <td>{{ $k->jabatan }}</td>
+            <td>{{ $k->idk }}</td>
+            <td>{{ $k->pnama }}</td>
+            <td>{{ $k->dnama }}</td>
         </tr>
         @endforeach
     </table>

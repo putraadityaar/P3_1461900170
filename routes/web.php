@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/dokter', [putraController::class, 'dokter']);
-Route::get('/pasien', [putraController::class, 'pasien']);
 Route::get('/kamar', [putraController::class, 'kamar']);
-Route::get('/user', [putraController::class, 'user']);
+Route::get('/pasien', [pasienController::class, 'pasien']);
+Route::get('/pasien/tambah', [pasienController::class,'tambah']);
+Route::get('/pasien/hapus/{id}', [pasienController::class,'hapus']);
+Route::get('/pasien/edit/{id}',[pasienController::class,'edit']);

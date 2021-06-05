@@ -23,11 +23,10 @@
     <br>
     <h1>Halaman Dokter</h1>
 
-    <button href="">Tambah</button>
     </div>
     </div>
     </div>
-
+<hr>
     <table border="1">
         <tr>
             <th>ID</th>
