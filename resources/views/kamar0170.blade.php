@@ -21,7 +21,7 @@
     <div class="col-lg-6">
     <div class="row my-8">
     <br>
-    <h1>Halaman KAMAR</h1>
+    <h1>Halaman Kamar</h1>
     </div>
 
     <table border="1">
@@ -38,7 +38,5 @@
         </tr>
         @endforeach
     </table>
-
- 
 </body>
 </html>

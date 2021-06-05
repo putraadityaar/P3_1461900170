@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 Route::get('/dokter', [putraController::class, 'dokter']);
 Route::get('/kamar', [putraController::class, 'kamar']);
-Route::get('/pasien', [pasienController::class, 'pasien']);
-Route::get('/pasien/tambah', [pasienController::class,'tambah']);
-Route::get('/pasien/hapus/{id}', [pasienController::class,'hapus']);
-Route::get('/pasien/edit/{id}',[pasienController::class,'edit']);
+Route::get('/pasien', [putraController::class, 'pasien']);
+Route::get('/pasien/tambah', [putraController::class,'tambah']);
+Route::get('/pasien/hapus/{id}', [putraController::class,'hapus']);
+Route::get('/pasien/edit/{id}',[putraController::class,'edit']);
